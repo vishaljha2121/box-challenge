@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Boxing Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body onload="startGame()">
+    <div>
+      <p3>Punch the moving box to increase score</p3>
+      <p1>HIT COUNT: </p1>
+      <p2 id="counter"> 0</p2>
+      <!-- <p1>BOX</p1>
+      <p2 id="box_x"> 0</p2>
+      <p2 id="box_y"> 0</p2>
+      <p1>HAND LX</p1>
+      <p2 id="hand_lx"> 0</p2>
+    <p1>HAND LY</p1>
+      <p2 id="hand_ly"> 0</p2>
+    <p1>HAND RX</p1>
+      <p2 id="hand_rx"> 0</p2>
+    <p1>HAND RY</p1>
+      <p2 id="hand_ry"> 0</p2> -->
+      <!-- <p1>SPEED LEFT HAND</p1>
+      <p2 id="speed_l"> 0</p2>
+      <p1>SPEED RIGHT HAND</p1>
+      <p2 id="speed_r"> 0</p2> -->
+      <p1 id="message">Message</p1>
+    </div>
+    <div>
+      <video></video>
+      <!-- <img id="ball" src="./ball.png"/> -->
+      <canvas id="ball-canvas"></canvas>
+      <canvas id="landmarks"></canvas>
+      <h1></h1>
+    </div>
+    <script src="./resolution.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
