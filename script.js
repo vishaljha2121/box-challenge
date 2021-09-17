@@ -201,14 +201,19 @@ function hitCount() {
   position_array_left.push(hand_left_x_last_pos);
   position_array_right.push(hand_right_x_last_pos);
 
+  cur_fps = document
+    .getElementsByClassName("fps-text")[0]
+    .innerHTML.replace(/[^\d.]/g, "");
   speed_l_x =
     (position_array_left[position_array_left.length - 5] -
       position_array_left[position_array_left.length - 1]) *
-    0.7;
+    (1 / cur_fps) *
+    20;
   speed_r_x =
     (position_array_right[position_array_right.length - 5] -
       position_array_right[position_array_right.length - 1]) *
-    0.7;
+    (1 / cur_fps) *
+    20;
 
   /* document.getElementById("right_hand_speed").innerHTML = speed_l_x.toFixed(1);
   document.getElementById("left_hand_speed").innerHTML = speed_r_x.toFixed(1); */
